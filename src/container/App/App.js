@@ -1,6 +1,7 @@
 import searchImage from "../../api";
 import { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
+import ImageList from "../../components/ImageList/ImageList";
 const App = () => {
   const [term, setTerm] = useState("cat");
   const changeHandler = (e) => {
@@ -16,8 +17,9 @@ const App = () => {
       <SearchBar
         submit={(e) => submitHandler(e)}
         change={(e) => changeHandler(e)}
-        currentValue = {term}
+        currentValue={term}
       />
+      <ImageList />
     </>
   );
 };

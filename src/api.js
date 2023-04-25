@@ -5,6 +5,6 @@ const searchImage = async (searchQuery) => {
     params: {query:searchQuery},
   };
   const response = await axios.get("https://api.unsplash.com/search/photos", options);
-  console.log(response.data.results)
+  console.log(response.data.results);
 };
 export default searchImage;
