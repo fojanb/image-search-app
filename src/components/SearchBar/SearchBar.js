@@ -1,12 +1,21 @@
-const SearchBar = ({ submit , change ,currentValue}) => {
+import { useState } from "react";
+const SearchBar = ({getImages}) => {
+  const [term, setTerm] = useState("cat");
+  const changeHandler = (e) => {
+    setTerm(e.target.value);
+  };
+  const submitHandler = (e) => {
+    e.preventDefault();
+    getImages(term);
+  };
   return (
-    <form onSubmit={submit}>
+    <form onSubmit={submitHandler}>
       <input
-      onChange={change}
+        onChange={changeHandler}
         type="text"
         autoComplete="off"
         placeholder="Search image..."
-        value={currentValue}
+        value={term}
         required
       />
       <button type="submit">Click to fetch data from server</button>
