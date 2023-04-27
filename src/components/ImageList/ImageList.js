@@ -1,4 +1,5 @@
 import { ImageShow } from "../ImageShow/ImageShow";
+import "./ImageList.css";
 const ImageList = ({ images }) => {
   let renderedImages = images.map((image) => {
     return (
@@ -9,6 +10,6 @@ const ImageList = ({ images }) => {
       />
     );
   });
-  return <div>{renderedImages}</div>;
+  return <div className="image-list">{renderedImages}</div>;
 };
 export default ImageList;

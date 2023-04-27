@@ -10,7 +10,7 @@ const App = () => {
   };
   return (
     <>
-      <h1>Image Search App with React.js and Axios</h1>
+      <h1><span style={{fontSize:"25px"}}>・❥・</span>Image Search App with React.js and Axios</h1>
       <SearchBar getImages={getImages} />
       <ImageList images={images} />
     </>

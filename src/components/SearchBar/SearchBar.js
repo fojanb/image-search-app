@@ -1,6 +1,7 @@
 import { useState } from "react";
+import "./SearchBar.css";
 const SearchBar = ({getImages}) => {
-  const [term, setTerm] = useState("cat");
+  const [term, setTerm] = useState("");
   const changeHandler = (e) => {
     setTerm(e.target.value);
   };
@@ -14,11 +15,11 @@ const SearchBar = ({getImages}) => {
         onChange={changeHandler}
         type="text"
         autoComplete="off"
-        placeholder="Search image..."
+        placeholder="Search something..."
         value={term}
         required
       />
-      <button type="submit">Click to fetch data from server</button>
+      {/* <button type="submit">Click to fetch data from server</button> */}
     </form>
   );
 };
