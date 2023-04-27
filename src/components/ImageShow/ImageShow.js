@@ -1,7 +1,7 @@
-const ImageShow = ({ alt, src, id }) => {
+const ImageShow = ({ alt, src }) => {
   return (
     <>
-      <img alt={alt} src={src} id={id} width="300px" />
+      <img alt={alt} src={src} />
     </>
   );
 };
