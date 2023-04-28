@@ -8,6 +8,7 @@ const SearchBar = ({getImages}) => {
   const submitHandler = (e) => {
     e.preventDefault();
     getImages(term);
+    setTerm("");
   };
   return (
     <form onSubmit={submitHandler}>
